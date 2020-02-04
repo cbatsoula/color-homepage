@@ -1,3 +1,5 @@
+
+
 .App {
   display: flex;
   height: 100vh;
@@ -6,6 +8,7 @@
   animation:
     pulse 5s ease infinite alternate;
 }
+
 
 @keyframes pulse {
   0%, 100% {
@@ -17,6 +20,9 @@
   60% {
     background-color: blue;
   }
+  /* 0% {
+    background-color: randomColor;
+  } */
 
 }
 @-moz-keyframes pulse { /* Firefox */

@@ -1,17 +1,30 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  let randomColor = Math.floor(Math.random()*16777215).toString(16);
-  console.log(randomColor)
+class App extends React.Component {
 
-  return (
-    <div className="App">
+  randomColor = () => {
+    let start = "#"
+    let color = Math.floor(Math.random()*16777215).toString(16);
+    let backgroundcolor = start.concat(color)
+    console.log(backgroundcolor)
+    return backgroundcolor
+  }
 
 
 
-    </div>
-  );
+
+  render () {
+
+    return (
+      <div className="App" style={{backgroundColor: this.randomColor()}}>
+
+
+
+      </div>
+    );
+
+  }
 }
 
 export default App;

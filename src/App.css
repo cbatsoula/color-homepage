@@ -4,13 +4,13 @@
   display: flex;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  /* background-color: black;
   animation:
-    pulse 5s ease infinite alternate;
+    pulse 5s ease infinite alternate; */
 }
 
 
-@keyframes pulse {
+ /* @keyframes pulse {
   0%, 100% {
     background-color: pink;
   }
@@ -23,29 +23,3 @@
   /* 0% {
     background-color: randomColor;
   } */
-
-}
-@-moz-keyframes pulse { /* Firefox */
-  0%, 100% {
-    background-color: pink;
-  }
-  50% {
-    background-color: #c4cf7c;
-  }
-}
-@-webkit-keyframes pulse { /* Safari and Chrome */
-  0%, 100% {
-    background-color: pink;
-  }
-  50% {
-    background-color: #c4cf7c;
-  }
-}
-@-o-keyframes pulse { /* Opera */
-  0%, 100% {
-    background-color: pink;
-  }
-  50% {
-    background-color: #c4cf7c;
-  }
-}

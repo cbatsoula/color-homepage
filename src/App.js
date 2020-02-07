@@ -15,18 +15,6 @@ class App extends React.Component {
     return backgroundcolor
   }
 
-
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     date: new Date(),
-  //     color: randomColor(),
-  //   };
-  //
-  // }
-
-
   componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),

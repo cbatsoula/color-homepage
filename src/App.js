@@ -32,17 +32,14 @@ class App extends React.Component {
     });
   }
 
-
-
-
-
   render () {
 
     return (
       <div className="App" style={{backgroundColor: this.randomColor()}}>
-      <h1>Hello, world!</h1>
-      <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-
+        <div className="Text">
+          <h1>Hello, world!</h1>
+          <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+        </div>
 
       </div>
     );

@@ -4,22 +4,27 @@
   display: flex;
   height: 100vh;
   width: 100vw;
-  /* background-color: black;
-  animation:
-    pulse 5s ease infinite alternate; */
+  /* background-color: black; */
+  animation: pulse 5s infinite;
 }
 
+.Text {
+  display: flex;
+  height: 30vh;
+  width: 70vw;
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
 
- /* @keyframes pulse {
-  0%, 100% {
+/* @keyframes pulse {
+  0% {
     background-color: pink;
   }
-  50% {
+  100% {
     background-color: #c4cf7c;
   }
-  60% {
-    background-color: blue;
-  }
-  /* 0% {
-    background-color: randomColor;
-  } */
+} */

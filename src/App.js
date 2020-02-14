@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-
+const REACT_APP_API_KEY = `${process.env.REACT_APP_API_KEY}`
 class App extends React.Component {
 
   state = {
     date: new Date(),
+    weather: {},
   }
 
   randomColor = () => {
@@ -20,7 +21,20 @@ class App extends React.Component {
       () => this.tick(),
       1000
     );
+    this.getWeather()
   }
+
+  getWeather = () => {
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${REACT_APP_API_KEY}/40.8267,-73.9233`, {
+      method: "GET"},
+      {headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        }})
+      .then(r => r.json())
+      .then(data => console.log("data", data))
+  }
+
 
   componentWillUnmount() {
     clearInterval(this.timerID);

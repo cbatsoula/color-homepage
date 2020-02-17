@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Currently from './Currently'
+
 const REACT_APP_API_KEY = `${process.env.REACT_APP_API_KEY}`
 class App extends React.Component {
 
@@ -12,7 +14,7 @@ class App extends React.Component {
     let start = "#"
     let color = Math.floor(Math.random()*16777215).toString(16);
     let backgroundcolor = start.concat(color)
-    console.log(backgroundcolor)
+    // console.log(backgroundcolor)
     return backgroundcolor
   }
 
@@ -32,7 +34,11 @@ class App extends React.Component {
           'Access-Control-Allow-Origin': '*'
         }})
       .then(r => r.json())
-      .then(data => console.log("data", data))
+      .then(data => {
+        this.setState({
+          weather: data
+        })
+      })
   }
 
 
@@ -47,12 +53,13 @@ class App extends React.Component {
   }
 
   render () {
-
+    // console.log("what we got", this.state.weather.currently)
     return (
       <div className="App" style={{backgroundColor: this.randomColor()}}>
         <div className="Text">
           <h1>Hello, world!</h1>
           <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+          <Currently data={this.state.weather.currently}/>
         </div>
 
       </div>

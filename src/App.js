@@ -59,7 +59,13 @@ class App extends React.Component {
         <div className="Text">
           <h1>Hello, world!</h1>
           <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-          <Currently data={this.state.weather.currently}/>
+          {
+            this.state.weather.currently
+            ?
+            <Currently data={this.state.weather.currently}/>
+            :
+            <h1> not yet </h1>
+          }
         </div>
 
       </div>

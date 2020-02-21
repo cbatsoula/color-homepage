@@ -52,6 +52,7 @@ class App extends React.Component {
   }
 
   render () {
+    // not yet is rendered for a solid minute -- figure out how to handle this better
     // console.log("what we got", this.state.weather.currently)
     return (
       <div className="App" style={{backgroundColor: this.randomColor()}}>

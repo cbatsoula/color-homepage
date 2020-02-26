@@ -6,10 +6,15 @@ class Currently extends React.Component {
   render () {
     console.log("what we got", this.props)
     return (
-      <div className="Currently">
-        Currently it is {this.props.data.summary}, with a temperature of {this.props.data.temperature}, apparent temperature of {this.props.data.apparentTemperature}.
+      <>
+        <div className="Currently">
+          Currently it is {this.props.data.summary}, with a temperature of {this.props.data.temperature}, apparent temperature of {this.props.data.apparentTemperature}.
 
-      </div>
+        </div>
+        <div className="Minutely">
+        Minutely forecast is {this.props.minutely.summary}
+        </div>
+      </>
     );
 
   }

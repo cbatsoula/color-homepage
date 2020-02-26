@@ -62,7 +62,7 @@ class App extends React.Component {
           {
             this.state.weather.currently
             ?
-            <Currently data={this.state.weather.currently}/>
+            <Currently data={this.state.weather.currently} minutely={this.state.weather.minutely}/>
             :
             <h1> not yet </h1>
           }

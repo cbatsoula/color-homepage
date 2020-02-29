@@ -53,7 +53,7 @@ class App extends React.Component {
 
   render () {
     // not yet is rendered for a solid minute -- figure out how to handle this better
-    // console.log("what we got", this.state.weather.currently)
+    // console.log("what we got", this.state.weather)
     return (
       <div className="App" style={{backgroundColor: this.randomColor()}}>
         <div className="Text">
@@ -62,7 +62,7 @@ class App extends React.Component {
           {
             this.state.weather.currently
             ?
-            <Currently data={this.state.weather.currently} minutely={this.state.weather.minutely}/>
+            <Currently data={this.state.weather.currently} hourly={this.state.weather.hourly} minutely={this.state.weather.minutely}/>
             :
             <h1> not yet </h1>
           }

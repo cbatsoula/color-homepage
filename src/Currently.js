@@ -12,7 +12,7 @@ class Currently extends React.Component {
 
         </div>
         <div className="Minutely">
-        Minutely forecast is {this.props.minutely.summary}
+          Minutely forecast is  {this.props.minutely.summary}
         </div>
       </>
     );

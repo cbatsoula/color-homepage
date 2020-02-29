@@ -8,6 +8,7 @@
   animation: pulse 1s infinite;
 
 
+
 }
 
 .Text {
@@ -26,12 +27,13 @@
   color: white;
   text-shadow: 2px 2px 4px #000000;
   flex-direction: column;
-
+  text-align: center;
 }
 
 .Currently {
   display: flex;
   padding: 10px;
+  text-align:left;
 }
 
 .Minutely {
@@ -39,6 +41,7 @@
   border: 1px solid white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
+  text-align: inherit;
 }
 
 /* @keyframes pulse {

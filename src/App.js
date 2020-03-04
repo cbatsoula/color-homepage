@@ -13,13 +13,26 @@ class App extends React.Component {
 
   randomColor = () => {
     let start = "#"
-    let color = Math.floor(Math.random()*16777215).toString(12);
-    let backgroundcolor = start.concat(color)
-    console.log(backgroundcolor)
-    this.setState({
-      rcolor: backgroundcolor,
-    })
-    return backgroundcolor
+    let color = Math.floor(Math.random()*16777215).toString(16);
+    let regexp = /^[0-9a-fA-F]+$/;
+    console.log(regexp.test(color))
+            if (regexp.test(color) && color.length === 6){
+              let backgroundcolor = start.concat(color)
+                console.log("ya", backgroundcolor);
+
+                this.setState({
+                  rcolor: backgroundcolor,
+                })
+              } else {
+                console.log("nahh", color)
+
+              }
+
+
+
+
+    console.log(color)
+    return color
   }
 
   componentDidMount() {

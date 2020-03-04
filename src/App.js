@@ -8,13 +8,17 @@ class App extends React.Component {
   state = {
     date: new Date(),
     weather: {},
+    rcolor: {},
   }
 
   randomColor = () => {
     let start = "#"
-    let color = Math.floor(Math.random()*16777215).toString(16);
+    let color = Math.floor(Math.random()*16777215).toString(12);
     let backgroundcolor = start.concat(color)
-    // console.log(backgroundcolor)
+    console.log(backgroundcolor)
+    this.setState({
+      rcolor: backgroundcolor,
+    })
     return backgroundcolor
   }
 
@@ -22,6 +26,10 @@ class App extends React.Component {
     this.timerID = setInterval(
       () => this.tick(),
       1000
+    );
+    this.timerID = setInterval(
+      () => this.randomColor(),
+      5000
     );
     this.getWeather()
   }
@@ -53,9 +61,9 @@ class App extends React.Component {
 
   render () {
     // not yet is rendered for a solid minute -- figure out how to handle this better
-    // console.log("what we got", this.state.weather)
+    // console.log("what we got", this.state)
     return (
-      <div className="App" style={{backgroundColor: this.randomColor()}}>
+      <div className="App" style={{backgroundColor: this.state.rcolor}}>
         <div className="Text">
           <h1>Hello, world!</h1>
           <h2>It is {this.state.date.toLocaleTimeString()}.</h2>

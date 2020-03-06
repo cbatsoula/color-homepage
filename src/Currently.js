@@ -8,7 +8,7 @@ class Currently extends React.Component {
     return (
       <>
         <div className="Currently">
-          Currently it is {this.props.data.summary}, with a temperature of {Math.round(this.props.data.temperature)}, apparent temperature of {Math.round(this.props.data.apparentTemperature)}.
+          Currently it is {this.props.data.summary}, with a temperature of {Math.round(this.props.data.temperature)}, apparent temperature of {Math.round(this.props.data.apparentTemperature)}, humidity is {Math.round(this.props.data.humidity * 100)}%, atmospheric pressure is {this.props.data.pressure} mbar.
 
         </div>
         <div className="Minutely">

@@ -18,16 +18,16 @@ class App extends React.Component {
     console.log(regexp.test(color))
             if (regexp.test(color) && color.length === 6){
               let backgroundcolor = start.concat(color)
-                console.log("ya", backgroundcolor);
+                // console.log("ya", backgroundcolor);
 
                 this.setState({
                   rcolor: backgroundcolor,
                 })
               } else {
-                console.log("nahh", color)
+                // console.log("nahh", color)
 
               }
-    console.log(color)
+    // console.log(color)
     return color
   }
 
@@ -52,6 +52,7 @@ class App extends React.Component {
         }})
       .then(r => r.json())
       .then(data => {
+        console.log(data)
         this.setState({
           weather: data
         })

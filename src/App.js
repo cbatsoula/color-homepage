@@ -27,10 +27,6 @@ class App extends React.Component {
                 console.log("nahh", color)
 
               }
-
-
-
-
     console.log(color)
     return color
   }

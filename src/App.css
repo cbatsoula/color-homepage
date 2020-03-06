@@ -5,8 +5,9 @@
   height: 100vh;
   width: 100vw;
   /* background-color: black; */
-  animation: pulse 1s infinite;
+  animation: pulse 6s infinite;
   font-family: 'Oxanium' ;
+
 
 
 
@@ -45,11 +46,14 @@
   text-align: inherit;
 }
 
-/* @keyframes pulse {
+@keyframes pulse {
   0% {
-    background-color: pink;
+    opacity:0.5;
+  }
+  50% {
+    opacity: 0.7;
   }
   100% {
-    background-color: #c4cf7c;
+    opacity: 0.3;
   }
-} */
+}

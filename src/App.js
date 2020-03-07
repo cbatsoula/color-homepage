@@ -70,8 +70,7 @@ class App extends React.Component {
   }
 
   render () {
-    // not yet is rendered for a solid minute -- figure out how to handle this better
-    // console.log("what we got", this.state)
+    
     return (
       <div className="App" style={{backgroundColor: this.state.rcolor}}>
         <div className="Text">
